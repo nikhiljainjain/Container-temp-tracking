@@ -1,0 +1,20 @@
+routes needed
+/ --> web page
+
+/rcv/whatsapp/ --> recevie whatsapp message
+{
+    in this route message recevie from whatsapp 
+    send reply to whatsapp
+    and sms to arduino
+}
+
+/rcv/sms --> arduino to server
+{
+    recevie sms data to server
+    and update & save data to the server
+}
+
+/app --> data send to app in json form
+{
+    latest data send to app in json format
+}
