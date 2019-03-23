@@ -1,11 +1,59 @@
-<!DOCTYPE html>
 <html>
-  <head>
-    <title><%= title %></title>
-    <link rel='stylesheet' href='/stylesheets/style.css' />
-  </head>
-  <body>
-    <h1><%= title %></h1>
-    <p>Welcome to <%= title %></p>
-  </body>
+    <head>
+        <title>Logistics Tracking System</title>
+        <link rel="stylesheet" href="css/bootstrap.min.css">
+        <link rel="stylesheet" href="css/style.css" type="text/css" />
+        <script src="js/bootstrap.min.js"></script>
+        <script src="js/jquery.min.js"></script>
+    </head>
+    <body class="bg-dark mt-3">
+        <div class="container bg-light pt-3" style="border-radius: 10px;">
+          
+          <div class="jumbotron jumbotron-fluid">
+            <div class="container">
+              <h1 class="display-4 text-center">Logistics Tracking System</h1>
+              <!--<p class="lead">This is a modified jumbotron that occupies the entire horizontal space of its parent.</p>-->
+            </div>
+          </div>
+          
+          <div class="row">
+            <div class="col-md-4">
+              
+              <div class="card text-white bg-dark mb-3" style="max-width: 18rem;">
+                <div class="card-header text-center"><b>TEMPERATURE</b></div>
+                <div class="card-body">
+                  <center><img src="img/Thermometre.png" width="100px"></img></center>
+                  <h1 class="card-title text-center">27°</h1>
+                  <!--<p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>-->
+                </div>
+              </div>
+              
+            </div>
+            <div class="col-md-4">
+              
+              <div class="card text-white bg-dark mb-3" style="max-width: 18rem;">
+                <div class="card-header text-center"><b>HUMIDITY</b></div>
+                <div class="card-body">
+                  <center><img src="img/Humidity.png" width="100px"></img></center>
+                  <h1 class="card-title text-center">56%</h1>
+                  <!--<p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>-->
+                </div>
+              </div>
+              
+            </div>
+            <div class="col-md-4">
+              
+              <div class="card text-white bg-dark mb-3" style="max-width: 18rem;">
+                <div class="card-header text-center"><b>STATUS</b></div>
+                <div class="card-body">
+                  <h5 class="card-title text-center">Dark card title</h5>
+                  <!--<p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>-->
+                </div>
+              </div>
+              
+            </div>
+          </div>
+          
+        </div>
+    </body>
 </html>
