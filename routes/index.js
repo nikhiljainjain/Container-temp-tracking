@@ -94,4 +94,14 @@ route.get("/req/app", (req, res, next)=>{
     res.json(dataSend);
 });
 
+route.get("/req/system/off", (req, res, next)=>{
+    if (sysX){
+        sysX = false;
+        res.json({"status": "off"});
+    }else{
+        sysX = true;
+        res.json({"status": "on"});
+    }
+});
+
 module.exports = route;
