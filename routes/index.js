@@ -82,4 +82,4 @@ route.post("/snd/msg", (req, res, next)=>{
           .done();
 });
 
-module.exports = router;
+module.exports = route;
