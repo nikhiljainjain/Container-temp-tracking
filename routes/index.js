@@ -15,6 +15,9 @@ const options = {
 	url: `https://api.aerisapi.com/airquality/vellore,india?&format=json&client_id=${aerisapi_access_id}&client_secret=${aerisapi_secret_key}` 
 };
 
+const latitude = 12.970466;
+const longitude = 79.160052;
+
 function request_fun(callback){
     request(options, function (error, response, body) {
     	const json = JSON.parse(body);
@@ -32,8 +35,6 @@ function request_fun(callback){
 
 route.get('/',function(req,res){
     //make query to fetch data from db
-    var latitude = 12.970466;
-    var longitude = 79.160052;
     var locationName;
     var url2 =
     "https://maps.googleapis.com/maps/api/geocode/json?latlng=" +
@@ -80,6 +81,17 @@ route.post("/snd/msg", (req, res, next)=>{
           })
           .then(message => console.log(message.body))
           .done();
+});
+
+route.get("/req/app", (req, res, next)=>{
+    let dataSend = {
+        lat_val : latitude,
+        lng_val : longitude,
+        temperature : 24,
+        humdity : 30,
+        status : "OK"
+    }
+    res.json(dataSend);
 });
 
 module.exports = route;
