@@ -4,7 +4,7 @@ var request = require("request");
 const config = require("../config/config");
 const accountSid = config.twilio_accountSid; //account sid from twilio website
 const authToken = config.twilio_authToken; //get authecation token from twilio website
-//const client = require('twilio')(accountSid, authToken);
+const client = require('twilio')(accountSid, authToken);
 const aerisapi_access_id = config.aerisapi_access_id;
 const aerisapi_secret_key = config.aerisapi_access_id;
 
@@ -82,3 +82,4 @@ route.post("/snd/msg", (req, res, next)=>{
           .done();
 });
 
+module.exports = router;
