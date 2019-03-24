@@ -1,7 +1,7 @@
 var express = require('express');
 var route = express.Router();
 const request = require("request");
-const config = require("./config/config");
+const config = require("../config/config");
 const accountSid = config.twilio_accountSid; //account sid from twilio website
 const authToken = config.twilio_authToken; //get authecation token from twilio website
 const client = require('twilio')(accountSid, authToken);
@@ -12,7 +12,7 @@ var sysX=true;//system on
 
 const options = {
     method: 'GET',
-	url: `https://api.aerisapi.com/airquality/vellore,india?&format=json&client_id=${config.aerisapi_access_id}&client_secret=${config.aerisapi_secret_key}` 
+	url: `https://api.aerisapi.com/airquality/vellore,india?&format=json&client_id=${aerisapi_access_id}&client_secret=${aerisapi_secret_key}` 
 };
 
 function request_fun(callback){
